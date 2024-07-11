@@ -17,6 +17,16 @@ void TestVector2d() {
 		assert(vec1.Length() == 4.);
 		assert(vec1.Sclar(2) == Vector2D(4., 4.));
 		assert(vec1.Reverse() == Vector2D(-4., -4.));
+		assert(orland::GetReverse(vec1) == Vector2D(4., 4.));
+	}
+	{
+		orland::Vector2D dec_vec (3., 4.);
+		orland::PolarVector polar(dec_vec);
+		orland::Vector2D new_dec_vec(polar);
+		assert(new_dec_vec == dec_vec);
+	}
+	{
+		// Rotate
 	}
 	std::cout << "TestVector2d is done!" << std::endl;
 }
