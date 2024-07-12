@@ -68,7 +68,27 @@ void TestVector2d() {
 	std::cout << "TestVector2d is done!" << std::endl;
 }
 
+void TestVector3d() {
+	{
+		orland::Vector3D vec1(1., 0., 0.);
+		orland::Vector3D vec2(0., 1., 0.);
+		assert(std::abs(vec1.GetBetweenAngle(vec2) - 90.) <= orland::Dopusk);
+	}
+	{
+		orland::Vector3D vec1(1., 1., 0.);
+		orland::Vector3D vec2(0., 0., 1.);
+		assert(std::abs(vec1.GetBetweenAngle(vec2) - 90.) <= orland::Dopusk);
+	}
+	{
+		orland::Vector3D vec1(1., 0., 0.);
+		orland::Vector3D vec2(0., 0., 1.);
+		orland::Vector3D test_per(0., -1., 0.);
+		assert(vec1.Normal(vec2) == test_per);
+	}
+}
+
 void FullTest() {
 	TestVector2d();
+	TestVector3d();
 	std::cout << "FullTest is done!" << std::endl;
 }

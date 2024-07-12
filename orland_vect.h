@@ -40,7 +40,7 @@ namespace orland {
 		// ------- из которых состоит и по т.Пифагора считаем
 		double Length() const;
 
-		// --- Скалярное произведение
+		// --- Умножение на скаляр 
 		// --- ГС: каждая коорд. умножается на скаляр - мастштабирование вектора
 		// ------- сохраняя соотношение сторон
 		void Scale(double scalar);
@@ -123,12 +123,77 @@ namespace orland {
 		
 	};
 
+	class Vector3D {
+	
+	public:
+		Vector3D() = default;
+		Vector3D(double x, double y, double z);
+
+		void operator=(const Vector3D& other);
+
+		// --- Длина 3D вектора
+		// --- ГС: вектор расскладывается на компоненты x, y и z
+		// ------- из которых состоит и по т.Пифагора считаем
+		double Length() const;
+
+		// --- Умножение на скаляр 
+		void Scale(double scalar);
+		Vector3D Scale(double scalar) const;
+
+		// --- Получить противоположный вектор
+		void Reverse();
+		Vector3D Reverse() const;
+
+		// --- Сметисть на вектор
+		void Move(const Vector3D& right);
+
+		// --- Вычитание векторов
+		void Subtract(const Vector3D& right);
+
+
+		double GetX() const;
+		double GetY() const;
+		double GetZ() const;
+
+		// --- Скалярное произведение векторов
+		double Scalar(const Vector3D& other) const;
+		Vector2D::COMMON_DIR DirStatuc(const Vector3D& other) const;
+
+		// --- Определить угол между двумя векторами в градусах
+		double GetBetweenAngle(const Vector3D& other) const;
+
+		// --- Произведение векторов
+		// --- ГС: возвращает 3D вектор, перпендикулярный обоим
+		// ------- подчиняясь правилу правой руки, где указательный(this)
+		// ------- согнутый средний (other) и возвращенный - большой
+		Vector3D Normal(const Vector3D& other) const;
+
+		/*
+		Длина векторного произведения это число, сообщающее степень перпендикулярности - площадь, охватываемую исходными векторами - равна площадки образованного векторами параллелограмма.
+		Наибольшая площадь охватывается, когда векторы перпендикулярны.
+		Если u и v направлены в одну сторону, они не охватывают никакой области - длина векторного произведения равна нулю и уникальное перпендикулярное направление не выбрать - это говорит о параллельности исходных векторов.
+		Площадь параллелограмма считается как |u||v|sinQ
+
+		*/
+
+
+
+
+	private:
+		double x = 0.;
+		double y = 0.;
+		double z = 0.;
+
+
+	};
+
 	// --- Сложение двух 2D векторов --- //
 	// --- ГС: из конца left проводится параллельно перенесенный right (пусть right')
 	// ------- а итоговый вектор суммы - соединение начала left и конца right'
 	// ------- и right' показывает направление и расстояние до конечной точки
 	// ------- это правило треугольника
 	Vector2D operator+(const Vector2D& left, const Vector2D& right);
+	Vector3D operator+(const Vector3D& left, const Vector3D& right);
 
 	// --- Вычитание двух 2D векторов
 	// --- Аналог Vector2D::Substratc(right)
@@ -137,6 +202,8 @@ namespace orland {
 	// --- Равенство двух 2D векторов --- //
 	bool operator==(const Vector2D& left, const Vector2D& right);
 	bool operator!=(const Vector2D& left, const Vector2D& right);
+	bool operator==(const Vector3D& left, const Vector3D& right);
+	bool operator!=(const Vector3D& left, const Vector3D& right);
 
 	// --- Равенство двух полярных векторов --- //
 	bool operator==(const PolarVector& left, const PolarVector& right);
