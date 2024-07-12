@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "S:\\MyC\\pets_\\VectorsLib\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|S:\\MyC\\pets_\\VectorsLib\\testframe.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|solutionrelative:testframe.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|S:\\MyC\\pets_\\VectorsLib\\orland_vect.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|solutionrelative:orland_vect.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|S:\\MyC\\pets_\\VectorsLib\\orland_vect.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|solutionrelative:orland_vect.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|S:\\MyC\\pets_\\VectorsLib\\vector_massiv.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|solutionrelative:vector_massiv.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|S:\\MyC\\pets_\\VectorsLib\\vector_massiv.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|solutionrelative:vector_massiv.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|S:\\MyC\\pets_\\VectorsLib\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|S:\\MyC\\pets_\\VectorsLib\\testframe.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{93BDF9F3-9EBC-4E8E-8A50-4EB2F524DDDC}|VectorsLib.vcxproj|solutionrelative:testframe.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "vector_massiv.h",
+              "DocumentMoniker": "S:\\MyC\\pets_\\VectorsLib\\vector_massiv.h",
+              "RelativeDocumentMoniker": "vector_massiv.h",
+              "ToolTip": "S:\\MyC\\pets_\\VectorsLib\\vector_massiv.h",
+              "RelativeToolTip": "vector_massiv.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-07-12T08:59:44.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "orland_vect.h",
+              "DocumentMoniker": "S:\\MyC\\pets_\\VectorsLib\\orland_vect.h",
+              "RelativeDocumentMoniker": "orland_vect.h",
+              "ToolTip": "S:\\MyC\\pets_\\VectorsLib\\orland_vect.h",
+              "RelativeToolTip": "orland_vect.h",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAcwFgAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-07-12T08:48:14.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "vector_massiv.cpp",
+              "DocumentMoniker": "S:\\MyC\\pets_\\VectorsLib\\vector_massiv.cpp",
+              "RelativeDocumentMoniker": "vector_massiv.cpp",
+              "ToolTip": "S:\\MyC\\pets_\\VectorsLib\\vector_massiv.cpp",
+              "RelativeToolTip": "vector_massiv.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-12T08:48:10.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "orland_vect.cpp",
+              "DocumentMoniker": "S:\\MyC\\pets_\\VectorsLib\\orland_vect.cpp",
+              "RelativeDocumentMoniker": "orland_vect.cpp",
+              "ToolTip": "S:\\MyC\\pets_\\VectorsLib\\orland_vect.cpp",
+              "RelativeToolTip": "orland_vect.cpp",
+              "ViewState": "AQIAACoAAAAAAAAAAAAcwDgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-12T08:47:18.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "testframe.h",
+              "DocumentMoniker": "S:\\MyC\\pets_\\VectorsLib\\testframe.h",
+              "RelativeDocumentMoniker": "testframe.h",
+              "ToolTip": "S:\\MyC\\pets_\\VectorsLib\\testframe.h",
+              "RelativeToolTip": "testframe.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-07-12T08:46:24.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "testframe.cpp",
+              "DocumentMoniker": "S:\\MyC\\pets_\\VectorsLib\\testframe.cpp",
+              "RelativeDocumentMoniker": "testframe.cpp",
+              "ToolTip": "S:\\MyC\\pets_\\VectorsLib\\testframe.cpp",
+              "RelativeToolTip": "testframe.cpp",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-12T08:46:07.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "main.cpp",
+              "DocumentMoniker": "S:\\MyC\\pets_\\VectorsLib\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "S:\\MyC\\pets_\\VectorsLib\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-12T08:46:00.705Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
