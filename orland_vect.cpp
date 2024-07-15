@@ -1,4 +1,5 @@
 #include <cmath>
+#include <cassert>
 
 #include "orland_vect.h"
 
@@ -171,7 +172,7 @@ namespace orland {
 		return x * other.GetX() + y * other.GetY() + z * other.GetZ();
 	}
 
-	Vector2D::COMMON_DIR Vector3D::DirStatuc(const Vector3D& other) const {
+	Vector2D::COMMON_DIR Vector3D::DirStatus(const Vector3D& other) const {
 		using COMMON_DIR = Vector2D::COMMON_DIR;
 		double scalar = Scalar(other);
 		double total_length = Length() * other.Length();
@@ -199,6 +200,62 @@ namespace orland {
 		double new_y = z * other.GetX() - x * other.GetZ();
 		double new_z = x * other.GetY() - y * other.GetX();
 		return Vector3D(new_x, new_y, new_z);
+	}
+
+	Vector3D::DIR_STATUS_3D Vector3D::Dir3DStatus(const Vector3D& other) const {
+		double normal_length = Normal(other).Length();
+		double square = Length() * other.Length();
+		return std::abs(normal_length - 0.) < Dopusk ?
+			DIR_STATUS_3D::PARALLEL :
+			std::abs(square - normal_length) < Dopusk ?
+			DIR_STATUS_3D::PERPENDICULAR :
+			DIR_STATUS_3D::RANDOM;
+	}
+
+	double Vector3D::SquareBetween(const Vector3D& other) const {
+		double rad_angle = GradToRad(GetBetweenAngle(other));
+		double square = Length() * other.Length() * std::sin(rad_angle);
+		return square;
+	}
+
+	Vector3D Vector3D::GetSingular() const {
+		double length = Length();
+		if (std::abs(length - 0.) < Dopusk) return Vector3D(0., 0., 0.);
+		double e1 = x / length;
+		double e2 = y / length;
+		double e3 = z / length;
+		return Vector3D(e1, e2, e3);
+	}
+
+	void Vector3D::TurnAroundX(double angle) {
+		PolarVector polar2D(Vector2D(y, z));
+		polar2D.Rotate(angle);
+		Vector2D new_vec(polar2D);
+		y = new_vec.GetX();
+		z = new_vec.GetY();
+	}
+
+	void Vector3D::TurnAroundY(double angle) {
+		PolarVector polar2D(Vector2D(x, z));
+		polar2D.Rotate(-angle);
+		Vector2D new_vec(polar2D);
+		x = new_vec.GetX();
+		z = new_vec.GetY();
+	}
+
+	void Vector3D::TurnAroundZ(double angle) {
+		PolarVector polar2D(Vector2D(x, y));
+		polar2D.Rotate(angle);
+		Vector2D new_vec(polar2D);
+		x = new_vec.GetX();
+		y = new_vec.GetY();
+	}
+
+	Vector3D Vector3D::GetPointBetween(double part, const Vector3D& other) const {
+		assert(part >= 0. && part <= 1.);
+		Vector3D start = Scale(part);
+		Vector3D finish = other.Scale(1. - part);
+		return start + finish;
 	}
 	
 
@@ -251,5 +308,10 @@ namespace orland {
 	double RadToGrad(double rad_angle) {
 		return rad_angle * (180. / Pi);
 	}
+
+	double GradToRad(double grad_angle) {
+		return grad_angle * (Pi / 180.);
+	}
+	
 
 }//namespace orland
