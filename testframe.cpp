@@ -1,8 +1,11 @@
 #include "orland_vect.h"
+#include "orland_matrix.h"
 #include "testframe.h"
 #include <iostream>
 #include <cassert>
 #include <cmath>
+
+using namespace std::literals;
 
 void TestVector2d() {
 	using Vector2D = orland::Vector2D;
@@ -65,7 +68,6 @@ void TestVector2d() {
 	{
 		// Rotate
 	}
-	std::cout << "TestVector2d is done!" << std::endl;
 }
 
 void TestVector3d() {
@@ -125,8 +127,50 @@ void TestVector3d() {
 	}
 }
 
+void TestMatrix() {
+	using matrix = std::vector<std::vector<double>>;
+	{
+		orland::Matrix m1 (2,1);
+		m1.AddElement(1, 1, 2.);
+		m1.AddElement(2, 1, 3.);
+		orland::Matrix vector(1, 2);
+		vector.AddElement(1, 1, 3.);
+		vector.AddElement(1, 2, 4.);
+		matrix check = { {0, 0}, { 0, 18 } };
+		orland::Matrix res = orland::Multiply(vector, m1);
+		assert(res.GetMatrix() == check);
+	}
+	{
+		std::vector<orland::Vector3D> matrix_a{ { 1, 1, 0 }, { 1, 0, 1 }, { 1, -1, 1 } };
+		std::vector<orland::Vector3D> matrix_b{ { 0, 2, 1 }, { 0, 1, 0 }, { 1, 0, -1 } };
+		orland::Matrix m_a(matrix_a), m_b(matrix_b);
+		orland::Matrix res = orland::Multiply(m_a, m_b);
+		matrix check = { {0, 0, 0, 0}, {0, 3, 1, 0 }, {0, -1, 0, 2}, {0, 3, 1, -1} };
+		assert(res.GetMatrix() == check);
+
+	}
+	{
+		std::vector<orland::Vector3D> matrix_a{ { 3, -2, 5 } };
+		std::vector<orland::Vector3D> matrix_b{ { 0, 0, 1 }, { 2, 1, 0 }, { 1, 0, -1 } };
+		orland::Matrix m_a(matrix_a), m_b(matrix_b);
+		orland::Matrix res = orland::Multiply(m_b, m_a);
+		matrix check = { {0, 0}, {0, 1}, {0, -2}, {0, -2} };
+		assert(res.GetMatrix() == check);
+
+	}
+	{
+		orland::Matrix standart_bas = orland::GetStandart3D();
+		orland::Matrix vector(3, 1);
+		vector.AddElement(1, 1, 3.);
+		vector.AddElement(2, 1, 4.);
+		vector.AddElement(3, 1, 5.);
+		orland::Matrix res = orland::Multiply(standart_bas, vector);
+		assert(res == vector);
+	}
+}
+
 void FullTest() {
-	TestVector2d();
-	TestVector3d();
-	std::cout << "FullTest is done!" << std::endl;
+	RUN_TEST(TestVector2d);
+	RUN_TEST(TestVector3d);
+	RUN_TEST(TestMatrix);
 }

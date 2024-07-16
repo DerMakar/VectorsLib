@@ -1,6 +1,6 @@
 #include "testframe.h"
 
 int main() {
-	FullTest();
+	RUN_TEST(FullTest);
 	return 0;
 }
